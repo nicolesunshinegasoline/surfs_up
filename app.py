@@ -143,12 +143,16 @@ def temp_monthly():
 @app.route("/api/v1.0/temp/<start>")
 @app.route("/api/v1.0/temp/<start>/<end>")
 
-
+# create a function called stats()
 # calculate the temperature minimum, average, and maximum with the start and end dates.
 # use the sel list, which is simply the data points we need to collect.
 def stats(start=None, end=None):
     sel = [func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs)]
-
+    
+    # determine the starting and ending date
+    # by adding an if-not statement
+    # asterisk is used to indicate multiple results for our query:
+    # minimum, average, and maximum temperatures.
     if not end:
         results = session.query(*sel).\
             filter(Measurement.date >= start).all()
