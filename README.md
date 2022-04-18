@@ -22,5 +22,5 @@ The purpose of this project is to analyze temperature trends for the months of J
 - One piece of data I would look into is the average precipitation that occurs in June and December. Heavy precipitation can potentially curve sales in the surf and ice cream shop. 
 - The following two queries can be used to find the average precipitation for the months of June and December:
 ![](Resources/June_prcp.png)
-![](Resources/December_prcp.png)
+![](Resources/December_prcp1.png)
 
